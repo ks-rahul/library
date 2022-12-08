@@ -1,0 +1,935 @@
+:root {
+  --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --msger-bg: #fff;
+  --border: 2px solid #ddd;
+  --left-msg-bg: #ececec;
+  --right-msg-bg: #579ffb;
+}
+
+.test-color {
+  color: brown !important;
+}
+
+.fieldset,
+.tg-formtheme.tg-formcontactus .fieldset {
+  border: 1px solid;
+  padding: 25px 20px 10px;
+  border-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.fieldset legend {
+  max-width: 100%;
+  line-height: inherit;
+  color: inherit;
+  display: inline-block;
+  width: auto;
+  padding: 0 10px;
+  margin-bottom: 0;
+  font-weight: 600;
+  position: absolute;
+  top: -10px;
+  background: #fff;
+}
+
+.login-card {
+  max-width: 500px;
+  margin-left: auto;
+  /* max-width: 450px; */
+  margin-right: auto;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.08);
+}
+
+.btn-outline-dark:hover {
+  color: #fff;
+}
+
+@-moz-document url-prefix() {
+  .fieldset,
+  .tg-formtheme.tg-formcontactus .fieldset {
+    position: relative;
+  }
+
+  .fieldset legend {
+    position: absolute;
+    left: 20px;
+    top: -12px;
+    background: white;
+  }
+}
+
+.form-control {
+  text-transform: none;
+}
+
+.tg-postbook:hover .tg-featureimg.missinVission {
+  padding: initial;
+}
+
+.sub-menu {
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.sub-menu::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.sub-menu::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.sub-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.loginInfo {
+  max-width: 100%;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0 0;
+}
+
+.loginInfo .tg-sectionhead {
+  padding: 10px 15px !important;
+  overflow: hidden;
+}
+
+.loginInfo .tg-sectionhead h2 {
+  line-height: 1;
+}
+
+.image-container {
+  height: 100%;
+}
+
+.image-container figure {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.image-container figure img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-position: center;
+  object-fit: cover;
+  margin: auto;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  padding: 15px 90px;
+}
+
+.login-page {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+.tg-homeslider .item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+.tg-slidercontent h1 {
+  margin: 0 0 15px;
+  font-size: 50px;
+  line-height: 60px;
+  color: #000;
+  font-weight: 900;
+}
+.tg-slidercontent h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #000;
+}
+.tg-slidercontent .tg-description p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+}
+.tg-slidercontent {
+  background: #ffffff82;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 600px;
+}
+.tg-homeslider .owl-nav .tg-btnround.tg-btnprev {
+  left: 10px !important;
+}
+.tg-homeslider .owl-nav .tg-btnround.tg-btnnext {
+  right: 30px !important;
+}
+.chat-action-box {
+  position: relative;
+}
+.chat-action-box .dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 10px;
+  padding: 10px;
+  top: auto;
+}
+
+.chat-action-box .dropdown-menu .btn {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+.chat-action-box .dropdown-menu .btn:last-child {
+  margin-bottom: 0;
+}
+
+input {
+  text-transform: none !important;
+}
+
+.tg-booktitle h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.action-btn {
+  width: 100%;
+  justify-content: center;
+  background: whitesmoke;
+}
+
+.tg-productgrid .tg-postbook.my-book {
+  min-height: 430px;
+}
+
+.tg-postbookcontent .tg-btn {
+  display: inline-flex;
+  justify-content: center;
+  width: 100% !important;
+}
+
+/* chat module */
+.messenger-list-item td {
+  border: none;
+  line-height: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.messenger-sendCard button,
+.messenger-sendCard button:active,
+.messenger-sendCard button:focus {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.tg-themedropdown.open .tg-themedropdownmenu {
+  display: block !important;
+}
+
+.tg-currencydropdown .tg-btnthemedropdown {
+  display: flex;
+  align-items: center;
+}
+
+.messenger-infoView nav a,
+.messenger-listView-tabs a,
+.messenger-listView-tabs a:hover,
+.messenger-listView-tabs a:focus,
+.m-header svg {
+  color: #44474d !important;
+}
+
+.m-list-active,
+.m-list-active:hover,
+.m-list-active:focus {
+  background: #face5f !important;
+}
+.m-list-active span,
+.m-list-active p,
+.messenger-sendCard button svg {
+  color: #44474d !important;
+}
+
+.messenger-listView .m-body {
+  margin-top: 55px;
+}
+.mc-sender p,
+.mc-sender p sub {
+  background: #face5f !important;
+  color: #44474d !important;
+}
+
+.tg-btnthemedropdown#tg-wishlisst svg {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+svg.iconHide {
+  display: none !important;
+}
+#notification_list li a.viewall {
+  font-weight: 600;
+}
+#notification_list li a.viewall:hover {
+  color: #484848;
+}
+#notification_list li a.fontBold,
+.fontBold {
+  font-weight: 900;
+}
+.notificationlist,
+.notificationlist li {
+  list-style-type: none;
+}
+.dateTime {
+  display: block;
+  width: 100%;
+  color: #44474d;
+  font-size: 12px;
+}
+
+/* profile */
+.user-profile {
+  position: relative;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: auto;
+  border: 1px solid #dfdede;
+}
+.user-profile figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+.user-profile figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA8Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gMTAwCv/bAEMAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/bAEMBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAB4AHgMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP7MKKKKACiiigAooooAKKKKAP/Z);
+  z-index: -1;
+  pointer-events: none;
+}
+.user-profile figure img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.edit-btn-link {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 1;
+}
+
+.tg-productinfo li span:last-child {
+  word-break: break-word;
+}
+.registration-image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.registration-image-box figure {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.registration-image-box figure img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.h-m-auto {
+  height: 100%;
+}
+
+.m-list-active .activeStatus {
+  border-color: #face5f !important;
+}
+
+.tg-navigation ul {
+  padding-left: 0;
+}
+
+.pagination-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid whitesmoke;
+}
+.bookslist .tg-author {
+  position: relative;
+  z-index: 1;
+}
+.bookslist .tg-author:hover .editLink {
+  opacity: 1;
+}
+.bookslist .editLink {
+  position: absolute;
+  z-index: 5;
+  bottom: 2px;
+  right: 2px;
+  border: none !important;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+div#app {
+  /* width: 100%;
+  height: 100%; */
+  /* margin: 0;
+  padding: 0; */
+  /* overflow: hidden; */
+  /* display: flex; */
+}
+
+div#tg-wrapper {
+  /* width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: none; */
+  /* display: flex;
+  flex-flow: column;
+  overflow: auto; */
+}
+
+footer#tg-footer {
+  /* float: none; */
+  /* margin-top: auto; */
+  /* overflow: hidden; */
+}
+
+main#tg-main {
+  min-height: calc(100vh - 133px);
+}
+
+@media screen and (max-width: 992px) {
+  .registration-image-box figure img {
+    width: 100%;
+    height: auto;
+  }
+  .h-m-auto {
+    height: auto;
+  }
+  .mb-hide {
+    display: none;
+  }
+}
+
+.tg-aboutus figure img {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-details {
+  align-items: center;
+}
+
+.tg-bgtotallender .tg-status {
+  background: rgba(194, 145, 23, 0.85);
+}
+
+.tg-pickedbyauthor .tg-postbook {
+  max-height: 410px;
+  min-height: 410px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+}
+
+.tg-pickedbyauthor .tg-postbook:hover .tg-featureimg {
+  padding: 0px 20%;
+}
+.tg-pickedbyauthor .tg-postbookcontent {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tg-hovercontent .tg-description p {
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+}
+
+.tg-pickedbyauthor .tg-featureimg {
+  padding: 15px 30px;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+/* chat */
+
+.msger-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.msger-chat::-webkit-scrollbar {
+  width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.msg:last-of-type {
+  margin: 0;
+}
+.msg-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.msg-bubble {
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.msg-info-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.msg-info-time {
+  font-size: 0.85em;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+}
+
+.right-msg {
+  flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+  background: var(--right-msg-bg);
+  color: #fff;
+  border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+
+/* end chat */
+
+.dash-content,
+.books-details li {
+  background: #fff !important;
+}
+
+.tg-logo a img {
+  max-width: 135px;
+}
+
+#cards .card {
+  border-radius: 20px;
+  min-height: 100%;
+}
+
+#cards .heading-border {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+}
+
+#cards .card .user-picture img {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  background: #f8f9fa !important;
+  padding: 10px;
+}
+
+#cards .card .user-content .user-name {
+  margin-right: 150px;
+}
+
+/* multiselect */
+.multiselect-container {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.175);
+  margin: 0;
+}
+.multiselect-container .checkbox {
+  margin: 0;
+}
+.multiselect-container li {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  list-style: none;
+}
+.multiselect-container li a {
+  line-height: 25px;
+  margin: 0;
+  padding: 0 35px;
+}
+.custom-btn {
+  width: 100% !important;
+}
+.custom-btn .btn,
+.custom-multi {
+  text-align: left;
+  width: 100% !important;
+}
+.dropdown-menu > .active > a:hover {
+  color: inherit;
+}
+.multiselect .caret {
+  display: none;
+}
+/* multiselect */
+
+.radius-input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: 0 !important;
+}
+
+.radius-btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.f1x {
+  font-size: 1.3rem;
+}
+
+.radius-input + label {
+  position: absolute;
+  top: 100%;
+}
+
+.tg-themetag {
+  border-radius: 2px;
+  width: auto;
+  height: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.img-box {
+  position: relative;
+}
+.image-delete-btn {
+  color: #262626;
+  background: #fff !important;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-decoration: none !important;
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}
+
+.image-delete-btn.is_covers {
+  left: -5px;
+  right: auto;
+}
+
+.imageModal {
+  z-index: 1000;
+}
+.messenger-messagingView,
+.messenger-listView {
+  max-height: 500px;
+}
+.messenger {
+  height: auto;
+}
+
+.m-send {
+  text-transform: none !important;
+}
+
+.messenger-tab {
+  height: calc(500 - 45px);
+  max-height: 505px;
+}
+
+.messenger-listView {
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.messenger-listView::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.messenger-listView::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+.messenger-listView::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.floating-chat-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 100;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.app-modal {
+  z-index: 2000;
+}
+
+.requestModal .modal-header::before,
+.requestModal .modal-header::after {
+  display: none;
+}
+
+.requestModal form {
+  overflow: visible;
+}
+
+.requestModal form textarea {
+  height: 150px !important;
+}
+
+.requestModal form .btnGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.requestModal form .btnGroup button:first-child {
+  margin-right: 15px;
+}
+.requestModal .fieldset {
+  margin-bottom: 20px;
+}
+.dropdown-backdrop {
+  z-index: 10;
+}
+.error-space {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.form-space {
+  width: 100%;
+  padding: 0 22px;
+}
+.form-space .fieldset {
+  margin-bottom: 20px !important;
+}
+.requestModal .modal-footer .btnGroup {
+  margin: auto;
+}
+.banner-lay {
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.banner-lay .title {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.tg-wishlistandcart {
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+#notification_list,
+#notification_list li {
+  list-style-type: none;
+  transition: all 0.3s;
+}
+#notification_list li:not(:last-child) {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+#notification_list li a {
+  display: flex;
+  white-space: pre-wrap;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+}
+#notification_list li .fa {
+  margin-right: 8px;
+  padding-top: 5px;
+}
+#notification_list li a:hover {
+  color: #face5f;
+}
+.chat_navigation {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* all notification list */
+.notificationlist {
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+.notificationlist > li {
+  background: #f1f1f1;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+
+.notificationlist > li > a {
+  color: #262626;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.notificationlist > li > a > .fa {
+  margin-right: 8px;
+  padding-top: 5px;
+}
+
+.notificationlist > li > a > em {
+  margin-top: 5px;
+}
+
+.notificationlist > li + li {
+  margin-top: 2rem;
+}
+.tg-currencydropdown .tg-themedropdownmenu li a svg {
+  display: inline-block;
+  float: left;
+  font-style: normal;
+  line-height: inherit;
+  margin-top: 15px;
+}
+
+@media (max-width: 1080px) {
+  .tg-homeslidervthree .tg-slidercontent h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .messenger-messagingView,
+  .messenger-listView {
+    max-height: 100%;
+    min-height: 400px;
+    z-index: 90;
+  }
+  .messenger-infoView {
+    z-index: 110;
+  }
+  .messenger-listView {
+    z-index: 110;
+  }
+  .log-sign .tg-allstatus {
+    flex-wrap: wrap;
+  }
+  .tg-sectionspace {
+    padding: 50px 0;
+  }
+  .form-container {
+    padding: 15px;
+  }
+  .tg-navigationarea {
+    z-index: 100;
+  }
+  .listView-x {
+    display: block;
+  }
+  .m-header-right.mb-menu {
+    position: absolute;
+    right: 11px;
+    top: 20px;
+  }
+  .messenger-tab {
+    height: calc(100% - 45px);
+    max-height: 100%;
+  }
+  .messenger-listView .m-body {
+    margin-top: 55px;
+  }
+}

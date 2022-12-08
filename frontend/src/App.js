@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// In Built Modules
+import { Fragment } from "react";
+
+// CSS
+import "./assets/css/app.css";
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/normalize.css";
+import "./assets/css/font-awesome.min.css";
+import "./assets/css/icomoon.css";
+import "./assets/css/jquery-ui.css";
+import "./assets/css/owl.carousel.css";
+import "./assets/css/transitions.css";
+import "./assets/css/main.css";
+import "./assets/css/color.css";
+import "./assets/css/responsive.css";
+import "./assets/css/custom.css";
+
+// Custom Modules
+import MainLayout from "./hoc/layout/MainLayout";
+import RoutesComponent from "./routes/index";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="App">
+        <MainLayout>
+          <RoutesComponent />
+        </MainLayout>
+      </div>
+    </Fragment>
   );
 }
 
