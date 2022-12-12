@@ -2,13 +2,9 @@ function Footer() {
   return (
     <footer id="tg-footer" className="tg-footer tg-haslayout">
       <div className="tg-footerbar">
-        <a
-          id="tg-btnbacktotop"
-          className="tg-btnbacktotop"
-          href="javascript:void(0);"
-        >
+        <button type="button" id="tg-btnbacktotop" className="btn tg-btnbacktotop">
           <i className="icon-chevron-up"></i>
-        </a>
+        </button>
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">

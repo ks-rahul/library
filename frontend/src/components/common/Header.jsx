@@ -1,143 +1,124 @@
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+import HeaderNotification from "./HeaderNotification";
+import SearchForm from "./SearchForm";
+
+import useAuthentication from "../../hooks/isUserAuthenticated";
+import { useState } from "react";
+import { useEffect } from "react";
+
+const loggedInMenu = [
+  {
+    name: "Genres",
+    path: "/",
+    children: [{ name: "Genres 1", path: "/", children: [] }],
+  },
+  {
+    name: "Books",
+    path: "/",
+    children: [
+      { name: "All Books", path: "/", children: [] },
+      { name: "My Books", path: "/", children: [] },
+      { name: "Add Book", path: "/", children: [] },
+      { name: "Books Lent", path: "/", children: [] },
+      { name: "Books Borrowed", path: "/", children: [] },
+      { name: "Public Request", path: "/", children: [] },
+    ],
+  },
+  {
+    name: "Contact",
+    path: "/",
+    children: [],
+  },
+  {
+    name: "About",
+    path: "/",
+    children: [],
+  },
+];
+
+const loggedOutMenu = [
+  { name: "Home", path: "/", children: [] },
+  { name: "Our Goal & Mission", path: "/", children: [] },
+  { name: "How We Work", path: "/", children: [] },
+  { name: "Our Journey", path: "/", children: [] },
+  {
+    name: "About",
+    path: "/",
+    children: [
+      { name: "Team", path: "/", children: [] },
+      { name: "Contact", path: "/", children: [] },
+    ],
+  },
+];
+
+const userProfileDropdownMenu = [
+  { name: "Profile", path: "/", icon: "fa fa-user" },
+  { name: "Change Password", path: "/", icon: "fa fa-unlock-alt" },
+  {
+    name: "Log Out",
+    path: "",
+    isA: true,
+    icon: "fa fa-sign-out",
+  },
+];
+
 function Header() {
+  const { isUserAuthenticated } = useAuthentication();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(isUserAuthenticated);
+  const [menus, setMenus] = useState([]);
+
+  useEffect(() => {
+    setIsLoggedIn(isUserAuthenticated);
+    if (isUserAuthenticated) {
+      setMenus(loggedInMenu);
+    } else {
+      setMenus(loggedOutMenu);
+    }
+  }, [isUserAuthenticated]);
+
+  const onLogOut = () => {};
+
   return (
     <Fragment>
       <header id="tg-header" className="tg-header tg-haslayout">
-        <div className="tg-middlecontainer">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <strong className="tg-logo">
-                  <Link to="/" replace>
-                    <img
-                      src="/images/lending-library-logo.png"
-                      alt="Lending Library"
+        {isLoggedIn && (
+          <div className="tg-middlecontainer">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <Logo />
+                  <div className="tg-wishlistandcart d-flex align-items-center">
+                    <HeaderNotification />
+                    <UserDropdown
+                      user={{ image: "/images/users/img-01.jpg" }}
+                      onclick={onLogOut}
                     />
-                  </Link>
-                </strong>
-                <div className="tg-wishlistandcart d-flex align-items-center">
-                  <div className="dropdown tg-themedropdown tg-wishlistdropdown">
-                    <a
-                      href="javascript:void(0);"
-                      id="tg-wishlisst"
-                      className="tg-btnthemedropdown"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <span className="tg-themebadge">0</span>
-                      <i className="fa fa-bell"></i>
-                    </a>
-
-                    <ul
-                      className="dropdown-menu tg-themedropdownmenu"
-                      type="none"
-                      aria-labelledby="tg-wishlisst"
-                      id="notification_list"
-                    >
-                      <li className="text-center">
-                        <a className="dropdown-item d-block viewall" href="#">
-                          View All
-                        </a>
-                      </li>
-                    </ul>
                   </div>
-                  <div className="tg-themedropdown tg-minicartdropdown">
-                    <ul className="tg-addnav">
-                      <li>
-                        <a href="#">
-                          <i className="icon-lock"></i>
-                          <em>Login</em>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="icon-lock"></i>
-                          <em>Register</em>
-                        </a>
-                      </li>
-                    </ul>
-
-                    <div className="tg-userlogin bg-transparent p-0">
-                      <div className="dropdown tg-themedropdown tg-currencydropdown border-0 my-0 mx-0">
-                        <a
-                          href="javascript:void(0);"
-                          id="tg-currenty"
-                          className="tg-btnthemedropdown"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <figure>
-                            <img
-                              src="/images/users/img-01.jpg"
-                              alt="image description"
-                            />
-                          </figure>
-                          <span>name</span>
-                        </a>
-                        <ul
-                          className="dropdown-menu tg-themedropdownmenu"
-                          aria-labelledby="tg-currenty"
-                        >
-                          <li>
-                            <a href="#">
-                              <i className="fa fa-user"></i>
-                              <span>Profile</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" className="linkTagComment">
-                              <i className="fa fa-unlock-alt"></i>
-                              <span>Change Password</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              className="linkTagComment"
-                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                            >
-                              <i className="fas fa-sign-out-alt"></i>
-                              <i className="fa fa-sign-out iconHide"></i>
-                              <span>Logout</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="tg-searchbox">
-                  <form
-                    className="tg-formtheme tg-formsearch"
-                    action="{{ route('books.list"
-                    method="get"
-                  >
-                    <fieldset>
-                      <input
-                        type="text"
-                        name="search"
-                        className="typeahead form-control"
-                        placeholder="Search by title, author, genre, keyword, ISBN..."
-                        value="mm"
-                      />
-                      <button type="submit">
-                        <i className="icon-magnifier"></i>
-                      </button>
-                    </fieldset>
-                  </form>
+                  <SearchForm />
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
+
         <div className="tg-navigationarea">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              {!isLoggedIn && (
+                <div className="col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                  <Logo />
+                </div>
+              )}
+              <div
+                className={`${
+                  !isLoggedIn
+                    ? "col-xs-12 col-sm-9 col-md-10 col-lg-10"
+                    : "col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                }`}
+              >
                 <nav id="tg-nav" className="tg-nav">
                   <div className="navbar-header">
                     <button
@@ -158,43 +139,33 @@ function Header() {
                     className="collapse navbar-collapse tg-navigation"
                   >
                     <ul>
-                      <li className="menu-item-has-children">
-                        <a href="javascript:void(0);">Genres</a>
-                        <ul className="sub-menu" role="sub-menu">
-                          <li className="active">
-                            <a href="#">name</a>
+                      {menus.map((menu, idx) =>
+                        menu.children.length ? (
+                          <li
+                            className="menu-item-has-children"
+                            key={menu.name + "_" + idx}
+                          >
+                            <button type="button" className="text-linkbtn">
+                              {menu.name}
+                            </button>
+                            <ul className="sub-menu">
+                              {menu.children.map((sub, idx) => (
+                                <li
+                                  className="active"
+                                  key={sub.name + "_" + idx}
+                                >
+                                  <NavLink to={sub.path}>{sub.name}</NavLink>
+                                </li>
+                              ))}
+                            </ul>
                           </li>
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a href="javascript:void(0);">Books</a>
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">All Books</a>
+                        ) : (
+                          <li key={menu.name + "_" + idx}>
+                            <NavLink to={menu.path}>{menu.name}</NavLink>
                           </li>
-                          <li>
-                            <a href="#">My Books</a>
-                          </li>
-                          <li>
-                            <a href="#">Add Book</a>
-                          </li>
-                          <li>
-                            <a href="#">Books Lent</a>
-                          </li>
-                          <li>
-                            <a href="#">Books Borrowed</a>
-                          </li>
-                          <li>
-                            <a href="#">Public Requests</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">Contact</a>
-                      </li>
-                      <li>
-                        <NavLink to="/about">About</NavLink>
-                      </li>
+                        )
+                      )}
+
                       <li className="pull-right">
                         <a
                           href="#myModal"
@@ -212,6 +183,7 @@ function Header() {
           </div>
         </div>
       </header>
+
       <div
         className="modal fade"
         id="myModal"
@@ -256,9 +228,6 @@ function Header() {
                 <form
                   className="tg-formtheme tg-formcontactus"
                   id="book_request"
-                  method="POST"
-                  encType="multipart/form-data"
-                  action="javascript:void(0)"
                 >
                   <fieldset className="fieldset form-group add-form">
                     <legend className="small font-16">Book Information</legend>
@@ -266,7 +235,7 @@ function Header() {
                       <div className="col-md-12">
                         <div className="form-group w-100">
                           <label
-                            for="public_request_title"
+                            htmlFor="public_request_title"
                             className="col-form-label text-md-start"
                           >
                             Book Name
@@ -279,14 +248,13 @@ function Header() {
                               type="text"
                               className="form-control"
                               name="public_request_title"
-                              value=""
-                              autocomplete="public_request_title"
-                              autofocus
+                              autoComplete="public_request_title"
+                              autoFocus
                             />
                             <label
                               id="public_request_title-error"
                               className="error text-danger"
-                              for="public_request_title"
+                              htmlFor="public_request_title"
                             ></label>
                           </div>
                         </div>
@@ -294,7 +262,7 @@ function Header() {
                       <div className="col-md-12">
                         <div className="form-group w-100">
                           <label
-                            for="public_request_author"
+                            htmlFor="public_request_author"
                             className="col-form-label text-md-start"
                           >
                             Author
@@ -307,13 +275,12 @@ function Header() {
                               type="text"
                               className="form-control"
                               name="public_request_author"
-                              value=""
-                              autocomplete="public_request_author"
+                              autoComplete="public_request_author"
                             />
                             <label
                               id="public_request_author-error"
                               className="error text-danger"
-                              for="public_request_author"
+                              htmlFor="public_request_author"
                             ></label>
                           </div>
                         </div>
@@ -322,7 +289,7 @@ function Header() {
                       <div className="col-md-12">
                         <div className="form-group w-100">
                           <label
-                            for="author"
+                            htmlFor="author"
                             className="col-form-label text-md-start"
                           >
                             Message
@@ -334,9 +301,9 @@ function Header() {
                               name="message"
                               placeholder="Message"
                               className="form-control"
-                              autocomplete="subject"
+                              autoComplete="subject"
                               rows="5"
-                              autofocus
+                              autoFocus
                             ></textarea>
                           </div>
                         </div>
@@ -372,4 +339,55 @@ function Header() {
     </Fragment>
   );
 }
+
+const Logo = () => (
+  <strong className="tg-logo">
+    <Link to="/" replace>
+      <img src="/images/lending-library-logo.png" alt="Lending Library" />
+    </Link>
+  </strong>
+);
+
+const UserDropdown = ({ user, onclick }) => (
+  <div className="tg-themedropdown tg-minicartdropdown">
+    <div className="tg-userlogin bg-transparent p-0">
+      <div className="dropdown tg-themedropdown tg-currencydropdown border-0 my-0 mx-0">
+        <button
+          type="button"
+          id="tg-currenty"
+          className="tg-btnthemedropdown"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <figure>
+            <img src={user.image} alt={`${user.name}_image`} />
+          </figure>
+          <span>{user.name}</span>
+        </button>
+        <ul
+          className="dropdown-menu tg-themedropdownmenu"
+          aria-labelledby="tg-currenty"
+        >
+          {userProfileDropdownMenu.map((menu, idx) => (
+            <li key={menu.name + "_" + idx}>
+              {menu.isA ? (
+                <a href={menu.path} onClick={onclick}>
+                  <i className={menu.icon}></i>
+                  <span>{menu.name}</span>
+                </a>
+              ) : (
+                <NavLink to={menu.path} key={menu.name + "_" + idx}>
+                  <i className={menu.icon}></i>
+                  {menu.name}
+                </NavLink>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+);
+
 export default Header;

@@ -458,6 +458,11 @@ main#tg-main {
   min-height: calc(100vh - 133px);
 }
 
+.sliderSection ul li,
+.sliderSection ul {
+  list-style-type: none;
+}
+
 @media screen and (max-width: 992px) {
   .registration-image-box figure img {
     width: 100%;

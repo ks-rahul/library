@@ -1,84 +1,102 @@
 import { Fragment } from "react";
+import { Carousel } from "react-responsive-carousel";
 
 function HomePage() {
   return (
     <Fragment>
       <div
         id="tg-homeslider"
-        className="tg-homeslider tg-haslayout owl-carousel"
+        className="tg-homeslider tg-haslayout sliderSection"
       >
-        <div
-          className="item"
-          data-vide-bg="poster: /images/slider/book-library.jpg"
-          data-vide-options="position: 0% 50%"
+        <Carousel
+          showArrows={false}
+          autoPlay={true}
+          showIndicators={false}
+          infiniteLoop={true}
+          emulateTouch={true}
+          showStatus={false}
+          stopOnHover={true}
+          swipeable={true}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div className="tg-slidercontent pull-right">
-                  <h1>Jude Morphew</h1>
-                  <h2>Latest 2017 Release</h2>
-                  <div className="tg-description">
-                    <p>
-                      Consectetur adipisicing elit sed do eiusmod tempor
-                      incididunt ut labore tolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamcoiars nisi ut
-                      aliquip commodo.
-                    </p>
+          <div
+            className="item"
+            style={{
+              backgroundImage: "url('/images/slider/book-library.jpg')",
+              backgroundPosition: "0% 50%",
+            }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div className="tg-slidercontent pull-right">
+                    <h1>Jude Morphew</h1>
+                    <h2>Latest 2017 Release</h2>
+                    <div className="tg-description">
+                      <p>
+                        Consectetur adipisicing elit sed do eiusmod tempor
+                        incididunt ut labore tolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamcoiars nisi
+                        ut aliquip commodo.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="item"
-          data-vide-bg="poster: /images/slider/book-library-2.jpg"
-          data-vide-options="position: 0% 50%"
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 ">
-                <div className="tg-slidercontent">
-                  <h1>Jude Morphew</h1>
-                  <h2>Latest 2017 Release</h2>
-                  <div className="tg-description">
-                    <p>
-                      Consectetur adipisicing elit sed do eiusmod tempor
-                      incididunt ut labore tolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamcoiars nisi ut
-                      aliquip commodo.
-                    </p>
+          <div
+            className="item"
+            style={{
+              backgroundImage: "url('/images/slider/book-library-2.jpg')",
+              backgroundPosition: "0% 50%",
+            }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-10 col-lg-8 ">
+                  <div className="tg-slidercontent">
+                    <h1>Jude Morphew</h1>
+                    <h2>Latest 2017 Release</h2>
+                    <div className="tg-description">
+                      <p>
+                        Consectetur adipisicing elit sed do eiusmod tempor
+                        incididunt ut labore tolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamcoiars nisi
+                        ut aliquip commodo.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="item"
-          data-vide-bg="poster: /images/slider/book-library-3.jpg"
-          data-vide-options="position: 0% 50%"
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-10  col-lg-8 ">
-                <div className="tg-slidercontent">
-                  <h1>Jane Morphew</h1>
-                  <h2>Latest 2019 Release</h2>
-                  <div className="tg-description">
-                    <p>
-                      Consectetur adipisicing elit sed do eiusmod tempor
-                      incididunt ut labore tolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamcoiars nisi ut
-                      aliquip commodo.
-                    </p>
+          <div
+            className="item"
+            style={{
+              backgroundImage: "url('/images/slider/book-library-3.jpg')",
+              backgroundPosition: "0% 50%",
+            }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-10  col-lg-8 ">
+                  <div className="tg-slidercontent">
+                    <h1>Jane Morphew</h1>
+                    <h2>Latest 2019 Release</h2>
+                    <div className="tg-description">
+                      <p>
+                        Consectetur adipisicing elit sed do eiusmod tempor
+                        incididunt ut labore tolore magna aliqua. Ut enim ad
+                        minim veniam, quis nostrud exercitation ullamcoiars nisi
+                        ut aliquip commodo.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Carousel>
       </div>
 
       <div className="container">

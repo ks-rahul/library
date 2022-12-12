@@ -1341,11 +1341,13 @@ body.tg-comingsoonpage .tg-wrapper {
   position: relative;
   background: transparent;
 }
-.tg-navigation > ul > li > a {
+.tg-navigation > ul > li > a,
+.tg-navigation > ul > li > button {
   color: #262626;
   padding: 0 25px;
 }
-.tg-navigation > ul > li > a > i {
+.tg-navigation > ul > li > a > i,
+.tg-navigation > ul > li > button > i {
   display: block;
   font-size: 20px;
   line-height: inherit;
@@ -4933,7 +4935,7 @@ body.tg-comingsoonpage .tg-footerbar {
 .tg-newslist .custom-tg-post.tg-post figure {
   width: 300px;
 }
-.transaction-box{
+.transaction-box {
   max-height: 500px;
   height: 100%;
   overflow: hidden;
