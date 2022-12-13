@@ -1,11 +1,12 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 function HeaderNotification() {
   return (
     <Fragment>
       <div className="dropdown tg-themedropdown tg-wishlistdropdown">
-        <a
-          href="javascript:void(0);"
+        <button
+          type="button"
           id="tg-wishlisst"
           className="tg-btnthemedropdown"
           data-toggle="dropdown"
@@ -14,7 +15,7 @@ function HeaderNotification() {
         >
           <span className="tg-themebadge">0</span>
           <i className="fa fa-bell"></i>
-        </a>
+        </button>
 
         <ul
           className="dropdown-menu tg-themedropdownmenu"
@@ -23,9 +24,9 @@ function HeaderNotification() {
           id="notification_list"
         >
           <li className="text-center">
-            <a className="dropdown-item d-block viewall" href="#">
+            <Link className="dropdown-item d-block viewall" to="/">
               View All
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

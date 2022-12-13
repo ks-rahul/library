@@ -1,12 +1,10 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import HeaderNotification from "./HeaderNotification";
 import SearchForm from "./SearchForm";
 
 import useAuthentication from "../../hooks/isUserAuthenticated";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const loggedInMenu = [
   {
@@ -166,15 +164,26 @@ function Header() {
                         )
                       )}
 
-                      <li className="pull-right">
-                        <a
-                          href="#myModal"
-                          data-toggle="modal"
-                          data-target="#myModal"
-                        >
-                          Request For a Book
-                        </a>
-                      </li>
+                      {isLoggedIn ? (
+                        <li className="pull-right">
+                          <a
+                            href="#myModal"
+                            data-toggle="modal"
+                            data-target="#myModal"
+                          >
+                            Request For a Book
+                          </a>
+                        </li>
+                      ) : (
+                        <Fragment>
+                          <li className="pull-right">
+                            <NavLink to="/signup">Sign Up</NavLink>
+                          </li>
+                          <li className="pull-right">
+                            <NavLink to="/login">Login</NavLink>
+                          </li>
+                        </Fragment>
+                      )}
                     </ul>
                   </div>
                 </nav>

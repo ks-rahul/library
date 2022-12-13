@@ -36,6 +36,7 @@ function AboutUsPage() {
                     <div className="card-body panel-body">
                       <div className="user-picture">
                         <img
+                          alt="test"
                           src="https://images.unsplash.com/photo-1495603889488-42d1d66e5523?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=130&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=130"
                           className="shadow-sm rounded-circle"
                           height="130"
@@ -75,6 +76,7 @@ function AboutUsPage() {
                     <div className="card-body panel-body">
                       <div className="user-picture">
                         <img
+                          alt="test"
                           src="https://images.unsplash.com/photo-1582003457856-20898dd7e1ea?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=130&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=130"
                           className="shadow-sm rounded-circle"
                           height="130"
@@ -116,6 +118,7 @@ function AboutUsPage() {
                     <div className="card-body panel-body">
                       <div className="user-picture">
                         <img
+                          alt="test"
                           src="https://images.unsplash.com/photo-1492447166138-50c3889fccb1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=130&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=130"
                           className="shadow-sm rounded-circle"
                           height="130"
@@ -157,6 +160,7 @@ function AboutUsPage() {
                     <div className="card-body panel-body">
                       <div className="user-picture">
                         <img
+                          alt="test"
                           src="https://i.picsum.photos/id/836/130/130.jpg?hmac=Sot_REUw5W-XSuE6FmCjT9JenhZfiNqZYs3AQbfrZsc"
                           className="shadow-sm rounded-circle"
                           height="130"
@@ -284,7 +288,7 @@ function AboutUsPage() {
                 >
                   <div className="item">
                     <figure>
-                      <img src="/images/img-01.jpg" alt="image description" />
+                      <img src="/images/img-01.jpg" alt="description" />
                     </figure>
                     <div className="tg-successcontent">
                       <div className="tg-sectionhead">
@@ -306,7 +310,7 @@ function AboutUsPage() {
                   </div>
                   <div className="item">
                     <figure>
-                      <img src="/images/img-01.jpg" alt="image description" />
+                      <img src="/images/img-01.jpg" alt="description" />
                     </figure>
                     <div className="tg-successcontent">
                       <div className="tg-sectionhead">
@@ -328,7 +332,7 @@ function AboutUsPage() {
                   </div>
                   <div className="item">
                     <figure>
-                      <img src="/images/img-01.jpg" alt="image description" />
+                      <img src="/images/img-01.jpg" alt="description" />
                     </figure>
                     <div className="tg-successcontent">
                       <div className="tg-sectionhead">
@@ -372,10 +376,7 @@ function AboutUsPage() {
                 >
                   <div className="item tg-testimonial">
                     <figure>
-                      <img
-                        src="images/author/imag-02.jpg"
-                        alt="image description"
-                      />
+                      <img src="images/author/imag-02.jpg" alt="description" />
                     </figure>
                     <blockquote>
                       <q>
@@ -392,10 +393,7 @@ function AboutUsPage() {
                   </div>
                   <div className="item tg-testimonial">
                     <figure>
-                      <img
-                        src="/images/author/imag-02.jpg"
-                        alt="image description"
-                      />
+                      <img src="/images/author/imag-02.jpg" alt="description" />
                     </figure>
                     <blockquote>
                       <q>
@@ -412,10 +410,7 @@ function AboutUsPage() {
                   </div>
                   <div className="item tg-testimonial">
                     <figure>
-                      <img
-                        src="/images/author/imag-02.jpg"
-                        alt="image description"
-                      />
+                      <img src="/images/author/imag-02.jpg" alt="description" />
                     </figure>
                     <blockquote>
                       <q>
@@ -453,31 +448,28 @@ function AboutUsPage() {
             >
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-01.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-01.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Jude Morphew</a>
+                    <a href="#">Jude Morphew</a>
                   </h2>
                   <span>Online Retail Manager</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
@@ -486,31 +478,28 @@ function AboutUsPage() {
               </div>
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-02.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-02.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Book Burger</a>
+                    <a href="#">Book Burger</a>
                   </h2>
                   <span>Bookstore Director</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
@@ -519,31 +508,28 @@ function AboutUsPage() {
               </div>
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-03.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-03.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Book Ship &amp; Co.</a>
+                    <a href="#">Book Ship &amp; Co.</a>
                   </h2>
                   <span>Business Operations</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
@@ -552,31 +538,28 @@ function AboutUsPage() {
               </div>
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-04.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-04.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Enoch Gallion</a>
+                    <a href="#">Enoch Gallion</a>
                   </h2>
                   <span>Assistant Director</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
@@ -585,31 +568,28 @@ function AboutUsPage() {
               </div>
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-05.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-05.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Book House</a>
+                    <a href="#">Book House</a>
                   </h2>
                   <span>Business Operations</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
@@ -618,31 +598,28 @@ function AboutUsPage() {
               </div>
               <div className="item tg-author tg-member">
                 <figure>
-                  <a href="javascript:void(0);">
-                    <img
-                      src="/images/team/img-04.jpg"
-                      alt="image description"
-                    />
+                  <a href="#">
+                    <img src="/images/team/img-04.jpg" alt="description" />
                   </a>
                 </figure>
                 <div className="tg-authorcontent">
                   <h2>
-                    <a href="javascript:void(0);">Linnie Klimek</a>
+                    <a href="#">Linnie Klimek</a>
                   </h2>
                   <span>Assistant Director</span>
                   <ul className="tg-socialicons">
                     <li className="tg-facebook">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="tg-twitter">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="tg-linkedin">
-                      <a href="javascript:void(0);">
+                      <a href="#">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
