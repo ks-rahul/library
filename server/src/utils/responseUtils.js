@@ -2,8 +2,8 @@ exports.success = (message, results, statusCode) => {
   return {
     message,
     error: false,
-    code: statusCode,
-    results,
+    status_code: statusCode,
+    data: results,
   };
 };
 
