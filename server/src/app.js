@@ -8,8 +8,9 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const jsonwebtoken = require("jsonwebtoken");
 
-const responseProvider = require("./utils/responseUtils");
+const errorHandlerMiddleware = require("./api/middleware/errorHandler");
 
 // variables
 dotenv.config();
@@ -21,6 +22,8 @@ const User = require("./api/model/user");
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }).then(() => {
   console.log("DB Connected");
 });
+
+mongoose.set("strictQuery", false);
 
 mongoose.Promise = global.Promise;
 
@@ -57,10 +60,31 @@ app.use((req, res, next) => {
   next();
 });
 
+// app.use(function (req, res, next) {
+//   if (
+//     req.headers &&
+//     req.headers.authorization &&
+//     req.headers.authorization.split(" ")[0] === "JWT"
+//   ) {
+//     jsonwebtoken.verify(
+//       req.headers.authorization.split(" ")[1],
+//       process.env.SECRET,
+//       function (err, decode) {
+//         if (err) req.user = undefined;
+//         req.user = decode;
+//         next();
+//       }
+//     );
+//   } else {
+//     req.user = undefined;
+//     next();
+//   }
+// });
+
 // configure passport and sessions
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     // cookie: { secure: true },
@@ -73,19 +97,6 @@ const authRoutes = require("./api/routes/userRoutes");
 app.use(authRoutes);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
-  const error = new Error("Not found");
-  error.status = 404;
-  next(error);
-});
-
-app.use((error, req, res, next) => {
-  // set locals, only providing error in development
-  res.locals.message = error.message;
-  res.locals.error = req.app.get("env") === "development" ? error : {};
-
-  res.status(error.status || 500);
-  res.json(responseProvider.error(error.message, res.status));
-});
+app.use(errorHandlerMiddleware);
 
 module.exports = app;

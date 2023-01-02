@@ -2,8 +2,7 @@ import axios from "axios";
 import K from "../constants";
 import { trackPromise } from "react-promise-tracker";
 import { camelCaseKeys } from "../utils/generalUtility";
-import { logout } from "./api/userApi";
-import { store } from "../store";
+import store from "../store";
 import { updateStatus } from "../store/slices/uiSlice";
 import { setLoadingAction } from "src/store/slices/loading";
 
@@ -66,8 +65,9 @@ export default class NetworkCall {
     throw new Error("Method not implemented.");
   }
 }
+
 NetworkCall.axios = axios.create({
   baseURL: K.Network.URL.BaseAPI,
-  timeout: +K.Network.URL.Timeout,
+  timeout: K.Network.URL.Timeout,
   headers: {},
 });
